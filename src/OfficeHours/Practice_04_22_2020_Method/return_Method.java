@@ -5,6 +5,10 @@ public class return_Method {
 
      int result = sum2(31,43);
         System.out.println(result);
+
+        String result1 = reverse("baha");
+        System.out.println(result1);
+
     }
 
     public static void sum(int a, int b){
@@ -14,5 +18,11 @@ public class return_Method {
 
         return a+b ;
     }
-
+    public static String reverse(String str){
+        String reuslt = "";
+        for(int i = str.length()-1; i>=0; i--){
+            reuslt += str.charAt(i);
+        }
+        return reuslt;
+    }
 }
