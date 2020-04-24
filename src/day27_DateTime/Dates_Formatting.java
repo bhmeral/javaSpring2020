@@ -22,5 +22,7 @@ public class Dates_Formatting {
         LocalDate date3 = LocalDate.now();
 
         System.out.println(date3.format(dtf));
+
+
     }
 }
