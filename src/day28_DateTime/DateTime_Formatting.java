@@ -13,6 +13,5 @@ public class DateTime_Formatting {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy EEEE hh:mm:ss a");
 
         System.out.println(dateTime.format(dtf));
-
     }
 }
