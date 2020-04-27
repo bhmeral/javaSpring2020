@@ -1,5 +1,6 @@
 package Resources;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Library {
@@ -59,6 +60,29 @@ public class Library {
         }
         return result ;
     }
+    public static int max(ArrayList<Integer> numbers){
+
+        Integer max = Integer.MIN_VALUE;
+
+        for (Integer each : numbers){
+            if (each>max) {
+                max = each;
+            }
+        }
+        return max;
+    }
+    public static int min(ArrayList<Integer> numbers){
+        Integer min = Integer.MAX_VALUE;
+
+        for (Integer each : numbers){
+            if (each<min){
+                min = each;
+
+            }
+        }
+        return min;
+    }
+
 }
 
 
