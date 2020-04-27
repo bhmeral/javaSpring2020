@@ -1,13 +1,13 @@
 package day29_Wrapper_Array_List;
-/*
-Given:
+        /*
+        Given:
         String[] arr = {"1","2.5", "3", "3.5", "4.5"}
         find the maximum and minimum numbers
         NOTE: Do not use sort method
         */
 
 import java.util.Arrays;
-import java.util.function.DoublePredicate;
+
 
 public class WrapperClass_Practice {
     public static void main(String[] args) {
