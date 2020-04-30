@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class ArrayList_Methods_equals_contains {
+public class ArrayList_Methods_equals_contains_isempty {
     public static void main(String[] args){
         ArrayList<String> list1 = new ArrayList<>();
         list1.add("A");
@@ -48,5 +48,10 @@ public class ArrayList_Methods_equals_contains {
         }
 
         System.out.println(reversedList3);
+
+        list.clear();
+        boolean r4 = list.isEmpty();
+        System.out.println(r4);
+
     }
 }
