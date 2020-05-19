@@ -38,5 +38,4 @@ create a class called Bank Of America:
     public void creatingTicket(){
 
     }
-
 }
