@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class NestedLoopPractice4Hotel {
     public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
+
         /*
         king bed 120
         queen bed 100
@@ -13,44 +15,56 @@ public class NestedLoopPractice4Hotel {
         should ask which bedroom dou you wanna reserve
         if user provided ınvalid entry ==> re enter
          */
-        Scanner input =  new Scanner(System.in);
-        int kingbed = '$' + 120;
-        int queenbed = '$' + 100;
-        int singlebed = '$' + 80;
-        int bill = ' ';
+
+        int kingBed = 120;
+        int queenBed = 100;
+        int singleBed = 80;
+        int bill = 0;
 
 
-        while(true) {
-            System.out.println("Welcome To Our Hotel");
-            System.out.println("Which bedroom do you wanna reserve");
-            String reserve = input.nextLine();
-            while (!(reserve.equalsIgnoreCase("king bed")) || !(reserve.equalsIgnoreCase("queen bed")) || !(reserve.equalsIgnoreCase("single bed"))) {
-                System.out.println("Invalid Entry! Please Re-Enter.");
-                input.nextLine();
-            }
-            if (reserve.equalsIgnoreCase("king bed")) {
-                System.out.println("You reserved King Bed");
-                kingbed += bill;
-            } else if (reserve.equalsIgnoreCase("queen bed")) {
-                System.out.println("You reserved Queen Bed");
-                queenbed += bill;
-            } else if(reserve.equalsIgnoreCase("single bed")) {
-                System.out.println("You reserved Single Bed");
-                singlebed += bill;
-            }
-            System.out.println(bill);
-            if ((reserve.equalsIgnoreCase("king bed")) || !(reserve.equalsIgnoreCase("queen bed")) || (reserve.equalsIgnoreCase("single bed"))){
-                System.out.println("Have A Nice Stay At Our Hotel");
+        System.out.println("Welcome to our hotel");
+        System.out.println("Which room you wanna reserve");
+        String reservedRoom = scan.nextLine();
+
+        boolean valid = (reservedRoom.equalsIgnoreCase("King Bed") || reservedRoom.equalsIgnoreCase("Queen Bed") || reservedRoom.equalsIgnoreCase("Single Bed"));
+
+        while(true){
+                while (!valid){
+                    System.out.println("There is not such room called " + reservedRoom + " please enter valid room");
+                    reservedRoom = scan.nextLine();
+                    valid = (reservedRoom.equalsIgnoreCase("King Bed") || reservedRoom.equalsIgnoreCase("Queen Bed") || reservedRoom.equalsIgnoreCase("Single Bed"));
+
+                }
+            System.out.println("You reserved " + reservedRoom.toUpperCase());
+            System.out.println("How many days are you gonna stay");
+            int stayTime = scan.nextInt();
+            if (reservedRoom.equalsIgnoreCase("King Bed")){
+                bill = kingBed * stayTime;
                 break;
             }
 
+            if (reservedRoom.equalsIgnoreCase("Queen Bed")){
+                bill = queenBed * stayTime;
+                break;
+            }
 
-
-
-
-
-
+            if (reservedRoom.equalsIgnoreCase("Single Bed")){
+                bill = singleBed * stayTime;
+                break;
+            }
+           // valid = (reservedRoom.equalsIgnoreCase("King Bed") || reservedRoom.equalsIgnoreCase("Queen Bed") || reservedRoom.equalsIgnoreCase("Single Bed"));
+           // (!(reservedRoom.equalsIgnoreCase("King bed") || reservedRoom.equalsIgnoreCase("Queen bed") || reservedRoom.equalsIgnoreCase("single bed")))
         }
+
+
+
+        System.out.println("Thank you for your purchase , your bill is " + bill + "$ for " + reservedRoom.toUpperCase() + " have a nice stay");
+
+
+
+
+
+
 
     }
 }

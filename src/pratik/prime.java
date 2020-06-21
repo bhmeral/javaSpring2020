@@ -1,6 +1,12 @@
+package pratik;
+
 import java.util.Scanner;
 
 public class prime {
+
+    static int one ;
+
+
 
     public static void main(String[] args) {
 
@@ -13,7 +19,7 @@ public class prime {
 
         for (int i = 1; i <=num; i++){
             if (isPrime(i)){
-                System.out.println(i + " is prime");
+                System.out.println(i + " is pratik.prime");
             }
         }
     }

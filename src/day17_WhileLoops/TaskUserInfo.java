@@ -19,25 +19,19 @@ public class TaskUserInfo {
 
         while (!valid) {
             System.out.println("Wrong Input");
+            System.out.println("Please Re-Enter");
+            System.out.println("Enter username");
+            inputname = input.next();
+            System.out.println("Enter Password");
+            inputpassw = input.next();
+            if (inputname.equals(validusername) && inputpassw.equals(validpassword)){
+                break;
+            }
 
-        if (!(validusername.equalsIgnoreCase(inputname))) {
-            System.out.println("Enter your username");
-            input.next();
-        }
-        if (!(validpassword.equalsIgnoreCase(inputpassw))) {
-            System.out.println("Enter your password");
-            input.next();
-        }
-        if (valid) {
-            System.out.println("Logged In! Successfully.");
-            break;
-        }
 
     }
-        if(valid){
-         System.out.println("Logged In");
-        }
 
+        System.out.println("Logged In");
 
 
 
